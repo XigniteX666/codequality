@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CodequalityApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CodequalityApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CodequalityApplication.class, args);
+    }
 
 }
