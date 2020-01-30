@@ -15,7 +15,7 @@
     <description>Demo project for Code Analysis</description>
 
     <properties>
-        <java.version>13</java.version>
+        <java.version>1.8</java.version>
         <pmd.version>6.20.0</pmd.version>
         <sonar.projectKey>XigniteX666_codequality</sonar.projectKey>
         <sonar.organization>xignitex666</sonar.organization>
