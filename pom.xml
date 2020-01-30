@@ -16,6 +16,12 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<properties>
+			<sonar.projectKey>XigniteX666_codequality</sonar.projectKey>
+			<sonar.organization>xignitex666</sonar.organization>
+			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+			<sonar.login>de56727ce96c94c40747a9a8d48434408d1abfd4</sonar.login>
+		</properties>
 	</properties>
 
 	<dependencies>
