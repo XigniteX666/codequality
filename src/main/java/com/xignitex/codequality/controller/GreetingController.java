@@ -15,7 +15,7 @@ public class GreetingController {
         String firstName = "Oskar";
         int age = 54;
         if(firstName.equals(age)){
-            System.out.printf("Dit kan niet");
+            System.out.printf("Dit kan niet!");
         }
         return new Greeting(counter.incrementAndGet(), String.format(template, name) );
     }
