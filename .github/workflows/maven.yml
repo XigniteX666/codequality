@@ -22,4 +22,4 @@ jobs:
     - name: Build with Maven
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: mvn pmd:pmd sonar:sonar
+      run: mvn -e pmd:pmd sonar:sonar
