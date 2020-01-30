@@ -12,15 +12,17 @@
 	<artifactId>codequality</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>codequality</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Code Analysis</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<pmd.version>6.20.0</pmd.version>
 		<properties>
 			<sonar.projectKey>XigniteX666_codequality</sonar.projectKey>
 			<sonar.organization>xignitex666</sonar.organization>
 			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 			<sonar.login>de56727ce96c94c40747a9a8d48434408d1abfd4</sonar.login>
+			<sonar.java.pmd.reportPaths>target/pmd.xml</sonar.java.pmd.reportPaths>
 		</properties>
 	</properties>
 
@@ -58,6 +60,42 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.12.0</version>
+				<configuration>
+					<rulesets>
+						<ruleset>/category/java/bestpractices.xml</ruleset>
+						<ruleset>src/test/resources/pmd/pmd.xml</ruleset>
+					</rulesets>
+					<sourceEncoding>utf-8</sourceEncoding>
+					<minimumTokens>50</minimumTokens>
+					<targetJdk>8</targetJdk>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>net.sourceforge.pmd</groupId>
+						<artifactId>pmd-core</artifactId>
+						<version>${pmd.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>net.sourceforge.pmd</groupId>
+						<artifactId>pmd-java</artifactId>
+						<version>${pmd.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>net.sourceforge.pmd</groupId>
+						<artifactId>pmd-javascript</artifactId>
+						<version>${pmd.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>net.sourceforge.pmd</groupId>
+						<artifactId>pmd-jsp</artifactId>
+						<version>${pmd.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
